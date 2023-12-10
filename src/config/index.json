@@ -1,0 +1,62 @@
+{
+  "company": {
+    "name": "Natalia Soto Instructional Design Portfolio",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "href": "home"
+    },
+    {
+      "name": "Projects",
+      "href": "projects"
+    },
+    {
+      "name": "About",
+      "href": "about"
+    }
+  ],
+  "callToAction": {
+    "text": "See projects",
+    "href": "projects"
+  },
+  "mainHero": {
+    "title": "Instructional Design Portfolio",
+    "subtitle": "Natalia Soto",
+    "description": "",
+    "img": "/assets/images/ider.jpg",
+    "primaryAction": {
+      "text": "See projects",
+      "href": "#"
+    },
+    "secondaryAction": {
+      "text": "Email us",
+      "href": "mailto:nataliamelissas@gmail.com?subject=Natalia Soto ID Landing Page!"
+    }
+  },
+  "projects": {
+    "title": "What I've worked on",
+    "items": [
+      {
+        "title": "Macro4U: Learn to manage your macros for the best U",
+        "description": "",
+        "img": "/assets/images/product1.jpg"
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "nataliamelissas@gmail.com",
+        "href": "#",
+        "content": "my email"
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/issaafalkattan",
+      "twitter": "https://twitter.com/issaafkattan",
+      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+    }
+  }
+}

@@ -11,7 +11,7 @@ const IntroSection: React.FC = () => {
       <p className="mt-4">
         When I'm not coding, you can find me reading, at the gym, or spending time with loved ones. Feel free to contact me if you'd like to work together.
       </p>
-      <p className='mt-4'>Natalia Soto 2024. Made using React. View the code on <a href="https://github.com/nataliamelissas/nataliasoto" className='text-purple-400'>Github</a>.</p>
+      <p className='mt-4'>Natalia Soto 2024. View the code on <a href="https://github.com/nataliamelissas/nataliasoto" className='text-purple-400'>Github</a>.</p>
     </div>
   );
 };

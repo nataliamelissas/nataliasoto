@@ -61,10 +61,48 @@ const HomePage: React.FC = () => {
         <div className="flex-row justify-left text-left m-10">
           <h2 className="text-4xl font-bold mb-4">Educational Technology Experience</h2>
           <p className="text-lg">Volnuteering with local clubs to obtaining an <a href="https://ed-psych.utah.edu/instructional-design/" className='text-purple-600'>IDET M.Ed.</a></p>
-          <p className='text-2xl py-10' >
-            Macros4U - a mobile app created to help learn to count their macros and stay at a healthy weight. 
-          </p>
-          <button className='bg-slate-800'><a href='https://nataliamelissasdev.wixsite.com/natalia-soto-idet' className='text-white'>Visit site</a></button>
+          {/* MeD */}
+          <div className='pt-10'>
+            <span className='text-2xl'>
+              <line className='border border-slate-400 mr-5'/>
+              Instructional Design and Educational Technology (IDET) M.Ed.
+            </span>
+          </div>
+          <div>
+            <p className='text-xl pt-5' >
+              Currently working towards the M.Ed. for the IDET program at the University of Utah.
+            </p>
+            <p className='text-xl' >
+              Courses taken: Foundations of Instructional Design, Foundations of Learning, Human-Computer Interaction, Multimedia Design
+            </p>
+            <button className='bg-sky-600 mt-2'><a href='https://nataliamelissasdev.wixsite.com/natalia-soto-idet' className='text-white'>Visit site</a></button>
+          </div>         
+          {/* Projects */}
+          <div className='pt-10'>
+            <span className='text-2xl'>
+              <line className='border border-slate-400 mr-5'/>
+              Projects 
+            </span>
+          </div>
+          <div>
+            <p className='text-xl pt-5' >
+              Macros4U - a mobile app created to help learn to count their macros and stay at a healthy weight. 
+            </p>
+            <button className='bg-sky-600 mt-2'><a href='https://nataliamelissasdev.wixsite.com/natalia-soto-idet' className='text-white'>Visit site</a></button>
+          </div>
+          {/* Volunteer */}
+          <div className='pt-10'>
+            <span className='text-2xl'>
+              <line className='border border-slate-400 mr-5'/>
+              Volunteer 
+            </span>
+          </div>
+          <div>
+            <p className='text-xl pt-5' >
+              ClubAbility - Taught free coding classes to children of diverse backgrounds with the mission of increasing the number of women and people with disabilities that will major in Computer Science. Used Scratch, which was developed by MIT, to allow users to learn the basics of computer science with a wide variety of animations, stories, games that can be made ranging from easy to advanced. Collected laptop machines and other equipment for this cause. 
+            </p>
+            <button className='bg-sky-600 mt-2'><a href='https://www.clubability.org/' className='text-white'>Visit site</a></button>
+          </div>
         </div>
       </section>
       

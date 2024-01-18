@@ -107,7 +107,7 @@ const HomePage: React.FC = () => {
       </section>
       
       {/* Section 5 */}
-      <section className="bg-purple-950 text-white h-screen flex items-center justify-center">
+      <section id='contact' className="bg-purple-950 text-white h-screen flex items-center justify-center">
         <div className="text-left m-10">
           <div>
             <ProfileImage imageUrl={img}/>

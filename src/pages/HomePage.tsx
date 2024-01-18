@@ -17,7 +17,11 @@ const softwareExpMenuItems = [
   {title: 'Projects', date: 'Various', description: '• Arete: a collaborative time-management app for college students. This was my University of Utah Capstone Project. Tech stack: Typescript, React, AWS, Go, GraphQL. \n• Earthquake Data Visualization: Used Javascript and the D3.js UI library to create a visualization of earthquake magnitudes in San Francisco. I took ownership of all the D3 code on the homepage. https://nataliamelissas.github.io/earthquake-damage-visualization/ \n• This portfolio site: Using React, Tailwind CSS, and Vite to create a clean and responsive webpage.'}
 ];
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  contactSectionRef: React.LegacyRef<HTMLElement>
+}
+
+const HomePage: React.FC<HomePageProps> = ({contactSectionRef}) => {
   return (
     <div className="font-sans">
       {/* Section 1 */}
@@ -107,7 +111,7 @@ const HomePage: React.FC = () => {
       </section>
       
       {/* Section 5 */}
-      <section id='contact' className="bg-purple-950 text-white h-screen flex items-center justify-center">
+      <section id='contact-section' ref={contactSectionRef} className="bg-purple-950 text-white h-screen flex items-center justify-center">
         <div className="text-left m-10">
           <div>
             <ProfileImage imageUrl={img}/>

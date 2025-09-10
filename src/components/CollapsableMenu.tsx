@@ -32,7 +32,7 @@ const CollapsibleMenu: React.FC<CollapsibleMenuProps> = ({ items }) => {
           {expandedItem === item.title && (
             <div className="border border-gray-200/50 p-10">
               <p className='text-2xl pb-5'>{item.date}</p>
-              {item.description.split('\n').map((idx, str) => <p key={idx} text-xl>{str}</p>)}
+              {item.description.split('\n').map((str, idx) => <p key={idx} text-xl>{str}</p>)}
                <button className='mt-5' hidden={item.site == null ? true : false}><a href={item.site}>Visit site</a></button>
             </div>
           )}

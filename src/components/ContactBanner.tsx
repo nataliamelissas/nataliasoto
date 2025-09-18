@@ -1,14 +1,19 @@
 import React from "react";
 import linkedinIcon from '../assets/linkedin.svg'
+import linkedBlackIcon from '../assets/linkedin-black.svg'
 import githubIcon from '../assets/github.svg'
 import etsyIcon from '../assets/etsy-icon.svg'
 
-const ContactBanner: React.FC = () => {
+interface ContactBannerProps {
+    linkedInBlack?: boolean;
+}
+
+const ContactBanner: React.FC<ContactBannerProps> = ({ linkedInBlack }) => {
     return (
         <div className='flex justify-center'>
             <a href='https://www.linkedin.com/in/nataliamsoto/'>
                 <div className='w-12'>
-                    <img src={linkedinIcon} alt="LinkedIn"/>
+                    <img src={linkedInBlack ? linkedBlackIcon : linkedinIcon} alt="LinkedIn"/>
                 </div>
             </a>
             <a href='http://github.com/nataliamelissas'>

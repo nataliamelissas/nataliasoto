@@ -1,4 +1,5 @@
 // import FileDownloadButton from "./FileDownloadButton";
+import ContactBanner from "./ContactBanner";
 import TextButton from "./TextButton";
 
 interface NavbarProps {
@@ -22,6 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({contactSectionRef}) => {
                 NS
             </div>
             <div className="space-x-4 flex">
+                <ContactBanner linkedInBlack={true}/>
                 <TextButton handleClick={(handleClick)} text="Contact" />
                 {/* <FileDownloadButton /> */}
             </div>

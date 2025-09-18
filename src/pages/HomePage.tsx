@@ -134,7 +134,7 @@ const HomePage: React.FC<HomePageProps> = ({contactSectionRef}) => {
             <p className="text-lg">nataliamelissas@gmail.com</p>
           </div>
           <div className='flex pt-10'>
-            <ContactBanner/>
+            <ContactBanner linkedInBlack={false} />
           </div>
         </div>
       </section>

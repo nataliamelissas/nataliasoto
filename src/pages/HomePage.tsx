@@ -9,6 +9,7 @@ import proofpointImg from '../assets/s67VT62Z_400x400.png';
 import utesImg from '../assets/utes.png';
 import ivantiImg from '../assets/ivanti-logo.gif';
 import pluralsightImg from '../assets/pluralsight.webp';
+import resume from '../../public/resume.pdf';
 
 const softwareExpMenuItems = [
   { title: 'Full-time Software Engineer', date: 'Feb 2023 - Present', description: 'During my experience as a full-time Software Engineer, I have: \n• Launched a new, snappy, and responsive e-commerce checkout experience using React, Typescript, New Relic, and Apollo GraphQL at Pluralsight \n• Led efforts to build backend services from the ground-up at Ivanti for highly requested features such as an App Portal, a native app for end-users to manage, download, and install available apps onto their machine \n• Worked closely with senior engineers to optimize Ivanti\'s flagship product (Neurons) while building new event-driven architecture', site: 'https://www.ivanti.com/products/endpoint-security-for-endpoint-manager'},
@@ -30,11 +31,11 @@ const HomePage: React.FC<HomePageProps> = ({contactSectionRef}) => {
           <p className="text-2xl">Hi, I'm</p>
           <h1 className="text-6xl font-bold mb-4">Natalia Soto.</h1>
           <h1 className="text-5xl mb-4"><span className='opacity-50'>I'm a Software Engineer at </span><span className='opacity-100 text-yellow-300'>Ivanti.</span></h1>
-          <p className="text-2xl opacity-50">Drawing from both computer science and instructional design backgrounds, I approach software engineering with a unique perspective on how humans think and learn. This human-centered understanding fuels my current C#/C++ development work and drives my continuous exploration of AI, neural networks, and natural language processing.</p>
+          <p className="text-2xl opacity-50">This website was built using Typescript, React, Vite, and Tailwind CSS and is hosted on a GitHub page that is connected to my domain. I currently develop backend cloud microservices primarily in C#/C++. Drawing from both computer science and instructional design backgrounds, I approach software engineering with a unique perspective on how humans think and learn. This human-centered understanding fuels my current development work and drives my continuous exploration of AI.</p>
         </div>
         <div className="absolute bottom-10 left-10">
           <button 
-            onClick={() => window.open('/src/assets/resume.pdf', '_blank')}
+            onClick={() => window.open(resume, '_blank')}
             className="bg-yellow-300 text-purple-950 px-6 py-2 rounded-md font-bold hover:bg-yellow-400 transition-colors"
           >
             View Resume
@@ -58,7 +59,7 @@ const HomePage: React.FC<HomePageProps> = ({contactSectionRef}) => {
       
       
       {/* Section 3 */}
-      <ScreenSection mode='dark' header='Software Engineering Experience' subheader='Summary of my recent software engineering experience.'>
+      <ScreenSection mode='dark' header='Software Engineering Experience' subheader='Some of my recent software engineering experience.'>
         <div className='my-12'>
           <div className='columns-8 gap-4 mb-10'>
             <Image alt='utes' imageUrl={utesImg} />

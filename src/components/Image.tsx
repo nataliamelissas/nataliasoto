@@ -7,8 +7,8 @@ interface PrfileImageProps {
 
 const PrfileImage: React.FC<PrfileImageProps> = ({ imageUrl, alt }) => {
   return (
-    <div className='flex justify-center pb-10'>
-      <img src={imageUrl} alt={alt} className="xs:w-full lg:w-1/2 flex-shrink-0" />
+    <div className='flex items-center justify-center'>
+      <img src={imageUrl} alt={alt} className="w-12 h-12 object-contain" />
     </div>
   );
 };

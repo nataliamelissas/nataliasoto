@@ -31,7 +31,24 @@ const HomePage: React.FC<HomePageProps> = ({contactSectionRef}) => {
           <p className="text-2xl">Hi, I'm</p>
           <h1 className="text-6xl font-bold mb-4">Natalia Soto.</h1>
           <h1 className="text-5xl mb-4"><span className='opacity-50'>I'm a Software Engineer at </span><span className='opacity-100 text-yellow-300'>Ivanti.</span></h1>
-          <p className="text-2xl opacity-50">This website was built using Typescript, React, Vite, and Tailwind CSS and is hosted on a GitHub page that is connected to my domain. I currently develop backend cloud microservices primarily in C#/C++. Drawing from both computer science and instructional design backgrounds, I approach software engineering with a unique perspective on how humans think and learn. This human-centered understanding fuels my current development work and drives my continuous exploration of AI.</p>
+          <p className="text-2xl opacity-50">This website was built using Typescript, React, Vite, and Tailwind CSS and is hosted on a GitHub page that is connected to my domain. For work, I develop fullstack cloud microservices primarily in C# and Typescript with Angular. Drawing from both computer science and educational technology backgrounds, I approach software engineering with a unique perspective on how humans think and learn. This human-centered understanding fuels my current development work and drives my desire to learn and teach programming to others.</p>
+          
+          {/* TaliTech Callout */}
+          <div className="mt-6 p-4 bg-gradient-to-r from-yellow-400/20 to-purple-500/20 rounded-lg border border-yellow-300/50 backdrop-blur-sm">
+            <p className="text-lg">
+              <span className="text-yellow-300 font-semibold">✨ Check out my website for </span>
+              <a 
+                href="https://talitech.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-yellow-300 font-bold hover:text-yellow-200 underline underline-offset-4 decoration-2 transition-colors"
+              >
+                TaliTech
+              </a>
+              <span className="text-yellow-300 font-semibold">, a small startup in Bountiful, UT teaching kids how to code</span>
+              <span className="opacity-70 text-sm ml-2">(built with Next.js, TypeScript, React, and AWS)</span>
+            </p>
+          </div>
         </div>
         <div className="absolute bottom-10 left-10">
           <button 

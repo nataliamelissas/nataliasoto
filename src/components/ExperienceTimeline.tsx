@@ -16,16 +16,15 @@ interface Props {
 
 const ExperienceTimeline: React.FC<Props> = ({ jobs }) => {
   return (
-    <ol className="relative space-y-5">
+    <ol className="relative space-y-6">
       {/* Spine */}
       <span
         aria-hidden
-        className="absolute left-4 md:left-6 top-3 bottom-3 w-px bg-gradient-to-b from-amber-300/40 via-white/10 to-amber-300/0"
+        className="absolute left-4 md:left-6 top-3 bottom-3 w-px bg-gradient-to-b from-butter-400 via-butter-200 to-rose-200"
       />
 
       {jobs.map((job, idx) => {
         const logo = job.logoKey ? LOGOS[job.logoKey] : undefined;
-        // Unique key — two Proofpoint entries share company + title.
         const key = `${job.company}-${job.date}`;
         return (
           <li
@@ -33,8 +32,8 @@ const ExperienceTimeline: React.FC<Props> = ({ jobs }) => {
             className="group relative pl-12 md:pl-16"
             style={{ transitionDelay: `${idx * 40}ms` }}
           >
-            {/* Spine dot / logo medallion */}
-            <span className="absolute left-0 top-1 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-purple-950 ring-2 ring-amber-300/40 group-hover:ring-amber-300/80 transition-all overflow-hidden">
+            {/* Spine medallion / logo */}
+            <span className="absolute left-0 top-2 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-white ring-2 ring-butter-300 group-hover:ring-rose-400 transition-all overflow-hidden shadow-soft">
               {logo ? (
                 <img
                   src={logo}
@@ -42,29 +41,29 @@ const ExperienceTimeline: React.FC<Props> = ({ jobs }) => {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <span className="text-amber-300 text-xs font-bold">
+                <span className="text-butter-500 text-xs font-bold">
                   {job.company.charAt(0)}
                 </span>
               )}
             </span>
 
-            <article className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-7 transition-all duration-300 group-hover:border-amber-300/40 group-hover:bg-white/[0.07] group-hover:shadow-lg group-hover:shadow-amber-500/5">
+            <article className="rounded-3xl bg-white border border-ivory-300/70 p-6 md:p-7 shadow-soft transition-all duration-300 group-hover:border-butter-400 group-hover:shadow-lift">
               <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-1">
-                <h3 className="text-lg md:text-xl font-semibold text-white">
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-ink-900">
                   {job.title}
-                  <span className="text-amber-300"> · {job.company}</span>
+                  <span className="text-rose-500"> · {job.company}</span>
                 </h3>
-                <span className="text-xs font-medium uppercase tracking-wider text-amber-300/80 bg-amber-300/10 border border-amber-300/30 px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                <span className="text-xs font-bold uppercase tracking-wider text-butter-600 bg-butter-50 border border-butter-200 px-2.5 py-0.5 rounded-full whitespace-nowrap">
                   {job.date}
                 </span>
               </header>
-              <p className="text-xs text-white/50 mb-4">{job.location}</p>
+              <p className="text-xs text-ink-400 mb-4">{job.location}</p>
 
               <ul className="space-y-2.5">
                 {job.bullets.map((bullet, i) => (
                   <li
                     key={i}
-                    className="relative pl-4 text-sm text-white/75 leading-relaxed before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-amber-300/70"
+                    className="relative pl-4 text-sm text-ink-600 leading-relaxed before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-rose-400"
                   >
                     {bullet}
                   </li>
@@ -76,7 +75,7 @@ const ExperienceTimeline: React.FC<Props> = ({ jobs }) => {
                   href={job.site}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-amber-300 hover:text-amber-200 transition-colors"
+                  className="inline-flex items-center gap-1.5 mt-5 text-xs font-semibold text-rose-500 hover:text-rose-600 transition-colors"
                 >
                   Visit site
                   <svg

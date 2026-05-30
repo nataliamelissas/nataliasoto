@@ -2,17 +2,17 @@ import React from 'react';
 
 interface SkillTagProps {
   label: string;
-  tone?: 'light' | 'dark';
+  variant?: 'butter' | 'rose';
 }
 
-const SkillTag: React.FC<SkillTagProps> = ({ label, tone = 'light' }) => {
+const SkillTag: React.FC<SkillTagProps> = ({ label, variant = 'butter' }) => {
   const base =
     'inline-flex items-center px-3.5 py-1.5 rounded-full text-sm font-medium border transition-all duration-200';
-  const variant =
-    tone === 'dark'
-      ? 'bg-white/5 text-amber-200 border-amber-300/30 hover:border-amber-300/70 hover:bg-amber-300/10'
-      : 'bg-white text-purple-800 border-purple-200 hover:border-amber-400 hover:text-purple-900 hover:shadow-sm';
-  return <span className={`${base} ${variant}`}>{label}</span>;
+  const variantClasses =
+    variant === 'butter'
+      ? 'bg-butter-50 text-ink-800 border-butter-200 hover:border-butter-400 hover:bg-butter-100 hover:-translate-y-0.5'
+      : 'bg-rose-50 text-ink-800 border-rose-200 hover:border-rose-400 hover:bg-rose-100 hover:-translate-y-0.5';
+  return <span className={`${base} ${variantClasses}`}>{label}</span>;
 };
 
 export default SkillTag;

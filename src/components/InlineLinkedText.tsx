@@ -16,7 +16,7 @@ const InlineLinkedText: React.FC<Props> = ({
   text,
   links,
   className,
-  linkClassName = 'text-purple-700 underline underline-offset-2 hover:text-amber-600 transition-colors',
+  linkClassName = 'text-rose-500 underline underline-offset-2 hover:text-rose-600 transition-colors',
 }) => {
   if (!links || links.length === 0) {
     return <span className={className}>{text}</span>;

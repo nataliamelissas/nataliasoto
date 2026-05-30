@@ -28,7 +28,7 @@ export const PROFILE = {
   phoneHref: 'tel:8016497843',
   emailHref: 'mailto:nataliamelissas@gmail.com',
   summary:
-    'AI-first software engineer building agents that automate coding, testing, and GitHub deployments using Claude Code and markdown pipelines. Committed to clean, secure code, graceful error handling, and systems built to scale.',
+    'Software engineer building agents that automate coding, testing, and GitHub deployments using Claude Code and markdown pipelines. Committed to clean, secure code, graceful error handling, and systems built to scale.',
   quote:
     '"The greatest evil is convincing us that we have no choice. But choice … cannot be taken away."',
   quoteSource: 'Chevalier (2022)',

@@ -4,7 +4,6 @@ interface SectionHeaderProps {
   eyebrow: string;
   title: React.ReactNode;
   subtitle?: React.ReactNode;
-  tone?: 'light' | 'dark';
   align?: 'center' | 'left';
 }
 
@@ -12,22 +11,21 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   eyebrow,
   title,
   subtitle,
-  tone = 'dark',
   align = 'center',
 }) => {
-  const eyebrowColor = tone === 'dark' ? 'text-amber-300' : 'text-purple-600';
-  const titleColor = tone === 'dark' ? 'text-white' : 'text-slate-900';
-  const subtitleColor = tone === 'dark' ? 'text-white/60' : 'text-slate-600';
   const alignment = align === 'center' ? 'text-center mx-auto' : 'text-left';
-
   return (
     <div className={`mb-14 max-w-2xl ${alignment}`}>
-      <p className={`text-xs tracking-[0.25em] uppercase ${eyebrowColor} mb-3`}>
+      <p className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-butter-500 font-semibold mb-3">
+        <span aria-hidden className="w-6 h-px bg-butter-400" />
         {eyebrow}
+        <span aria-hidden className="w-6 h-px bg-butter-400" />
       </p>
-      <h2 className={`text-4xl md:text-5xl font-light ${titleColor}`}>{title}</h2>
+      <h2 className="font-display text-4xl md:text-5xl font-light text-ink-900 leading-tight">
+        {title}
+      </h2>
       {subtitle && (
-        <p className={`mt-4 text-base md:text-lg ${subtitleColor}`}>{subtitle}</p>
+        <p className="mt-4 text-base md:text-lg text-ink-400">{subtitle}</p>
       )}
     </div>
   );

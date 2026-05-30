@@ -7,6 +7,17 @@ export function useScrollSpy(sectionIds: string[], topOffset = 96): string | nul
     if (typeof window === 'undefined' || sectionIds.length === 0) return;
 
     const handler = () => {
+      // If we've reached the bottom of the page, force the last section active.
+      // Without this, sections that start below (maxScrollY + topOffset) — common
+      // for the final section on a tall page — can never win the loop below.
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActiveId(sectionIds[sectionIds.length - 1] ?? null);
+        return;
+      }
+
       const scrollY = window.scrollY + topOffset + 1;
       let current: string | null = null;
 

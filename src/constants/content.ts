@@ -53,9 +53,9 @@ export const PROJECTS: Project[] = [
   {
     name: 'scriptures_app',
     description:
-      "Built because my congregation was invited to read the Book of Mormon daily with a topic in mind, then start fresh and do it again. No app out there lets you start a clean copy of a book of scripture with new notes — so I'm making one for myself and my congregation.",
+      "Built because my congregation was invited to read scriptures daily with a topic in mind, then start fresh and do it again. No app out there lets you start a clean copy of a book of scripture with new notes — so I'm making one for myself and my congregation.",
     repo: 'https://github.com/nataliamelissas/scriptures_app',
-    tags: ['React Native', 'TypeScript', 'Personal'],
+    tags: ['Flutter', 'Dart', 'Firebase'],
     status: 'building',
   },
   {
@@ -63,8 +63,9 @@ export const PROJECTS: Project[] = [
     description:
       "Most resume builders do too much yet so little of what I actually need. This one lets me input my data, import/export it, and save it in an ATS-friendly format with no formatting or color distractions — it's all going to be parsed by a machine or AI anyway.",
     repo: 'https://github.com/nataliamelissas/resume-builder',
-    tags: ['TypeScript', 'React', 'ATS'],
-    status: 'building',
+    live: 'https://nataliamelissas.github.io/resume-builder/',
+    tags: ['Flutter', 'Dart', 'Local-first'],
+    status: 'live',
   },
   {
     name: 'tali-tech-client',
@@ -72,7 +73,7 @@ export const PROJECTS: Project[] = [
       "Currently the site for the in-person kids' coding classes I teach. An online kids' coding academy is coming soon.",
     repo: 'https://github.com/nataliamelissas/tali-tech-client',
     live: 'https://talitech.org',
-    tags: ['Next.js', 'TypeScript', 'AWS'],
+    tags: ['React', 'TypeScript', 'Cloudflare'],
     status: 'live',
   },
 ];
@@ -90,8 +91,7 @@ export const WRITING: Writing[] = [
     name: 'That Family AI Guide',
     description:
       'A practical resource for families trying to navigate the world of AI. Co-written with a neighborhood friend.',
-    // TODO: replace with real Substack URL once confirmed
-    url: 'https://substack.com/',
+    url: 'https://substack.com/@thefamilyaiguide',
     meta: 'Substack · Co-authored',
     status: 'live',
   },

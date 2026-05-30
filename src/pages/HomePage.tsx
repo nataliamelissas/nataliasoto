@@ -67,14 +67,7 @@ const HomePage: React.FC = () => {
           </p>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-8 leading-[0.95] text-ink-900">
-            Natalia{" "}
-            <span className="relative inline-block font-display italic font-semibold text-ink-900">
-              Soto
-              <span
-                aria-hidden
-                className="absolute -bottom-1 left-0 right-0 h-2 bg-butter-300/80 rounded-full -z-0 translate-y-1"
-              />
-            </span>
+            Natalia Soto
             <span className="text-rose-400">.</span>
           </h1>
 

@@ -1,16 +1,16 @@
-import React from 'react';
-import type { Project } from '../constants/content';
+import React from "react";
+import type { Project } from "../constants/content";
 
-const STATUS_LABEL: Record<NonNullable<Project['status']>, string> = {
-  building: 'Currently building',
-  live: 'Live',
-  'shipping-soon': 'Shipping soon',
+const STATUS_LABEL: Record<NonNullable<Project["status"]>, string> = {
+  building: "Building",
+  live: "Live",
+  "shipping-soon": "Shipping soon",
 };
 
-const STATUS_STYLE: Record<NonNullable<Project['status']>, string> = {
-  building: 'bg-rose-100 text-rose-600 border-rose-200',
-  live: 'bg-butter-100 text-butter-600 border-butter-200',
-  'shipping-soon': 'bg-ink-50 text-ink-700 border-ink-200',
+const STATUS_STYLE: Record<NonNullable<Project["status"]>, string> = {
+  building: "bg-rose-100 text-rose-600 border-rose-200",
+  live: "bg-butter-100 text-butter-600 border-butter-200",
+  "shipping-soon": "bg-ink-50 text-ink-700 border-ink-200",
 };
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
@@ -64,8 +64,18 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-rose-500 hover:text-rose-600 transition-colors"
           >
             Live site
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </a>
         )}

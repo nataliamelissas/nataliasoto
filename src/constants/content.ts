@@ -20,9 +20,6 @@ export const NAV_SECTIONS: { id: SectionId; label: string }[] = [
 ];
 
 export const PROFILE = {
-  name: 'Natalia Soto',
-  role: 'Software Engineer',
-  company: 'Ivanti',
   email: 'nataliamelissas@gmail.com',
   phone: '(801) 649-7843',
   phoneHref: 'tel:8016497843',

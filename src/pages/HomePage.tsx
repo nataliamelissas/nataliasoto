@@ -1,16 +1,16 @@
-import React from 'react';
-import ContactBanner from '../components/ContactBanner';
-import ProfileImage from '../components/ProfileImage';
-import SectionHeader from '../components/SectionHeader';
-import ProjectCard from '../components/ProjectCard';
-import WritingCard from '../components/WritingCard';
-import SkillTag from '../components/SkillTag';
-import Reveal from '../components/Reveal';
-import InlineLinkedText from '../components/InlineLinkedText';
-import ExperienceTimeline from '../components/ExperienceTimeline';
-import SectionDivider from '../components/SectionDivider';
-import profileImg from '../assets/mission-profile-2.jpg';
-import resume from '../../public/resume.pdf';
+import React from "react";
+import ContactBanner from "../components/ContactBanner";
+import ProfileImage from "../components/ProfileImage";
+import SectionHeader from "../components/SectionHeader";
+import ProjectCard from "../components/ProjectCard";
+import WritingCard from "../components/WritingCard";
+import SkillTag from "../components/SkillTag";
+import Reveal from "../components/Reveal";
+import InlineLinkedText from "../components/InlineLinkedText";
+import ExperienceTimeline from "../components/ExperienceTimeline";
+import SectionDivider from "../components/SectionDivider";
+import profileImg from "../assets/white-profile.png";
+import resume from "../../public/resume.pdf";
 import {
   SECTION_IDS,
   PROFILE,
@@ -20,15 +20,15 @@ import {
   SKILL_GROUPS,
   JOBS,
   EDUCATION,
-} from '../constants/content';
+} from "../constants/content";
 
-const SECTION_OFFSET = 'scroll-mt-24';
+const SECTION_OFFSET = "scroll-mt-24";
 
 const scrollToContact = () => {
   const el = document.getElementById(SECTION_IDS.contact);
   if (el) {
     const y = el.getBoundingClientRect().top + window.scrollY - 72;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
 };
 
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
           </p>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-extralight tracking-tight mb-8 leading-[0.95] text-ink-900">
-            Natalia{' '}
+            Natalia{" "}
             <span className="relative inline-block font-display italic font-semibold text-ink-900">
               Soto
               <span
@@ -84,7 +84,10 @@ const HomePage: React.FC = () => {
 
           <p className="font-display text-base md:text-lg italic text-ink-400 border-l-2 border-rose-300 pl-4 mb-12 max-w-2xl">
             {PROFILE.quote}
-            <span className="not-italic text-ink-400/80"> — {PROFILE.quoteSource}</span>
+            <span className="not-italic text-ink-400/80">
+              {" "}
+              — {PROFILE.quoteSource}
+            </span>
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -93,8 +96,18 @@ const HomePage: React.FC = () => {
               className="group inline-flex items-center gap-2 bg-ink-900 text-ivory-100 px-7 py-3 rounded-full font-semibold hover:bg-rose-500 transition-all duration-300 shadow-soft hover:shadow-rose-lift"
             >
               Message me
-              <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              <svg
+                className="w-4 h-4 group-hover:translate-y-0.5 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
               </svg>
             </button>
             <a
@@ -122,7 +135,7 @@ const HomePage: React.FC = () => {
               eyebrow="What I'm building"
               title={
                 <>
-                  Current{' '}
+                  Current{" "}
                   <span className="italic font-semibold text-rose-500">
                     projects
                   </span>
@@ -153,7 +166,7 @@ const HomePage: React.FC = () => {
               eyebrow="What I'm writing"
               title={
                 <>
-                  Notes{' '}
+                  Notes{" "}
                   <span className="italic font-semibold text-rose-500">
                     in public
                   </span>
@@ -184,7 +197,7 @@ const HomePage: React.FC = () => {
               eyebrow="What I work with"
               title={
                 <>
-                  Tech{' '}
+                  Tech{" "}
                   <span className="italic font-semibold text-butter-500">
                     stack
                   </span>
@@ -200,8 +213,8 @@ const HomePage: React.FC = () => {
                 key={pillar.name}
                 className={`rounded-3xl border p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 ${
                   idx === 1
-                    ? 'bg-butter-50 border-butter-200 hover:border-butter-400 hover:shadow-lift'
-                    : 'bg-white border-ivory-300/70 hover:border-rose-400 hover:shadow-rose-lift'
+                    ? "bg-butter-50 border-butter-200 hover:border-butter-400 hover:shadow-lift"
+                    : "bg-white border-ivory-300/70 hover:border-rose-400 hover:shadow-rose-lift"
                 }`}
               >
                 <h3 className="font-display text-2xl font-semibold text-ink-900 mb-3">
@@ -225,7 +238,7 @@ const HomePage: React.FC = () => {
                     <SkillTag
                       key={tag}
                       label={tag}
-                      variant={idx % 2 === 0 ? 'butter' : 'rose'}
+                      variant={idx % 2 === 0 ? "butter" : "rose"}
                     />
                   ))}
                 </div>
@@ -240,8 +253,18 @@ const HomePage: React.FC = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 bg-butter-400 text-ink-900 px-7 py-3 rounded-full font-semibold hover:bg-butter-500 hover:shadow-lift transition-all duration-300"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
               </svg>
               Download resume
             </a>
@@ -262,7 +285,7 @@ const HomePage: React.FC = () => {
               eyebrow="Career"
               title={
                 <>
-                  Work{' '}
+                  Work{" "}
                   <span className="italic font-semibold text-rose-500">
                     experience
                   </span>
@@ -291,7 +314,7 @@ const HomePage: React.FC = () => {
               eyebrow="School"
               title={
                 <>
-                  Education{' '}
+                  Education{" "}
                   <span className="italic font-semibold text-butter-500">
                     & degrees
                   </span>
@@ -308,8 +331,18 @@ const HomePage: React.FC = () => {
                 className="rounded-3xl bg-white border border-ivory-300/70 p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-butter-400 hover:shadow-lift"
               >
                 <div className="w-11 h-11 rounded-2xl bg-butter-100 text-butter-600 flex items-center justify-center mb-5">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.8}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"
+                    />
                   </svg>
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-1 text-ink-900">
@@ -332,8 +365,18 @@ const HomePage: React.FC = () => {
                     className="inline-flex items-center gap-1 text-sm font-semibold text-butter-600 hover:text-butter-500 transition-colors"
                   >
                     {degree.link.label}
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg
+                      className="w-3.5 h-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
                     </svg>
                   </a>
                 )}
@@ -365,14 +408,15 @@ const HomePage: React.FC = () => {
                 Get in touch
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-light text-ink-900 mb-5">
-                Let's{' '}
+                Let's{" "}
                 <span className="italic font-semibold text-rose-500">
                   connect
                 </span>
                 <span className="text-butter-400">.</span>
               </h2>
               <p className="text-lg text-ink-600 mb-8 max-w-md">
-                Want to know more about me or my work? Or just say hello? I'd love to hear from you.
+                Want to know more about me or my work? Or just say hello? I'd
+                love to hear from you.
               </p>
 
               <div className="flex flex-col gap-3 mb-8">
@@ -381,8 +425,18 @@ const HomePage: React.FC = () => {
                   className="inline-flex items-center gap-3 text-ink-700 hover:text-rose-500 transition-colors group w-fit"
                 >
                   <span className="w-10 h-10 rounded-xl bg-white border border-ivory-300 flex items-center justify-center group-hover:border-rose-300 group-hover:bg-rose-50 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.8}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      />
                     </svg>
                   </span>
                   <span className="font-medium">{PROFILE.email}</span>
@@ -392,8 +446,18 @@ const HomePage: React.FC = () => {
                   className="inline-flex items-center gap-3 text-ink-700 hover:text-butter-500 transition-colors group w-fit"
                 >
                   <span className="w-10 h-10 rounded-xl bg-white border border-ivory-300 flex items-center justify-center group-hover:border-butter-300 group-hover:bg-butter-50 transition-colors">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1.8}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                      />
                     </svg>
                   </span>
                   <span className="font-medium">{PROFILE.phone}</span>

@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
                   Current <span className="font-semibold">projects</span>
                 </>
               }
-              subtitle="Side projects I'm shipping right now, all on GitHub."
+              subtitle="Side projects I'm shipping right now."
               tone="dark"
             />
           </Reveal>

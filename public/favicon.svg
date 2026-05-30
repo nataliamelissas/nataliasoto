@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Butter background, rounded square -->
+  <rect width="64" height="64" rx="14" fill="#F2B441"/>
+  <!-- NS monogram in ink navy -->
+  <text
+    x="50%"
+    y="54%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Fraunces, Georgia, serif"
+    font-size="34"
+    font-weight="700"
+    font-style="italic"
+    fill="#1B2A41"
+    letter-spacing="-1"
+  >NS</text>
+  <!-- Rose period to echo the navbar logo -->
+  <circle cx="50" cy="48" r="4" fill="#F38BA0"/>
+</svg>

@@ -1,17 +1,14 @@
 import React from 'react';
 import ContactBanner from '../components/ContactBanner';
 import ProfileImage from '../components/ProfileImage';
-import CollapsibleMenu from '../components/CollapsableMenu';
 import SectionHeader from '../components/SectionHeader';
 import ProjectCard from '../components/ProjectCard';
 import WritingCard from '../components/WritingCard';
 import SkillTag from '../components/SkillTag';
 import Reveal from '../components/Reveal';
 import InlineLinkedText from '../components/InlineLinkedText';
+import ExperienceTimeline from '../components/ExperienceTimeline';
 import profileImg from '../assets/mission-profile-2.jpg';
-import ivantiImg from '../assets/ivanti-logo.gif';
-import pluralsightImg from '../assets/pluralsight.webp';
-import proofpointImg from '../assets/s67VT62Z_400x400.png';
 import resume from '../../public/resume.pdf';
 import {
   SECTION_IDS,
@@ -25,19 +22,6 @@ import {
 } from '../constants/content';
 
 const SECTION_OFFSET = 'scroll-mt-24';
-
-const COMPANY_LOGOS = [
-  { src: ivantiImg, alt: 'Ivanti' },
-  { src: pluralsightImg, alt: 'Pluralsight' },
-  { src: proofpointImg, alt: 'Proofpoint' },
-];
-
-const jobsForCollapsibleMenu = JOBS.map((job) => ({
-  title: `${job.title} at ${job.company}`,
-  date: `${job.location} · ${job.date}`,
-  description: job.bullets.map((b) => `• ${b}`).join('\n'),
-  site: job.site,
-}));
 
 const scrollToContact = () => {
   const el = document.getElementById(SECTION_IDS.contact);
@@ -239,19 +223,8 @@ const HomePage: React.FC = () => {
             />
           </Reveal>
 
-          <Reveal className="flex flex-wrap justify-center items-center gap-10 md:gap-14 mb-14 opacity-70">
-            {COMPANY_LOGOS.map((logo) => (
-              <img
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all"
-              />
-            ))}
-          </Reveal>
-
           <Reveal>
-            <CollapsibleMenu items={jobsForCollapsibleMenu} />
+            <ExperienceTimeline jobs={JOBS} />
           </Reveal>
         </div>
       </section>

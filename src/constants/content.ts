@@ -238,10 +238,17 @@ export const JOBS: Job[] = [
   },
 ];
 
+export interface InlineLink {
+  match: string;
+  href: string;
+}
+
 export interface Degree {
   degree: string;
   school: string;
   detail: string;
+  /** Substrings inside `detail` to render as anchor tags. */
+  inlineLinks?: InlineLink[];
   link?: { label: string; href: string };
 }
 
@@ -257,6 +264,7 @@ export const EDUCATION: Degree[] = [
     school: 'University of Utah',
     detail:
       'Founder and course designer at talitech.org, teaching K-12 coding using research-backed learning strategies.',
+    inlineLinks: [{ match: 'talitech.org', href: 'https://talitech.org' }],
     link: {
       label: 'Program details',
       href: 'https://ed-psych.utah.edu/instructional-design/',

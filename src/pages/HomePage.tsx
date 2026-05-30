@@ -7,6 +7,7 @@ import ProjectCard from '../components/ProjectCard';
 import WritingCard from '../components/WritingCard';
 import SkillTag from '../components/SkillTag';
 import Reveal from '../components/Reveal';
+import InlineLinkedText from '../components/InlineLinkedText';
 import profileImg from '../assets/mission-profile-2.jpg';
 import ivantiImg from '../assets/ivanti-logo.gif';
 import pluralsightImg from '../assets/pluralsight.webp';
@@ -290,7 +291,10 @@ const HomePage: React.FC = () => {
                   {degree.school}
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  {degree.detail}
+                  <InlineLinkedText
+                    text={degree.detail}
+                    links={degree.inlineLinks}
+                  />
                 </p>
                 {degree.link && (
                   <a

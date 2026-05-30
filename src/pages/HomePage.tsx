@@ -67,12 +67,7 @@ const HomePage: React.FC = () => {
             Natalia <span className="font-semibold bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">Soto</span>
           </h1>
 
-          <h2 className="text-2xl md:text-3xl font-light text-white/80 mb-8">
-            {PROFILE.role} at{' '}
-            <span className="text-amber-300 font-medium">{PROFILE.company}</span>
-          </h2>
-
-          <p className="text-lg leading-relaxed text-white/70 max-w-2xl mb-6">
+          <p className="text-lg leading-relaxed text-white/70 max-w-2xl mb-6 mt-8">
             {PROFILE.summary}
           </p>
 

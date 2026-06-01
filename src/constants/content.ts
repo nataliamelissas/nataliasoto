@@ -34,7 +34,6 @@ export const PROFILE = {
 export const SOCIAL = {
   linkedin: 'https://www.linkedin.com/in/nataliamsoto/',
   github: 'https://github.com/nataliamelissas',
-  etsy: 'https://etsy.com/shop/CharmBitsDesign',
 };
 
 export interface Project {

@@ -11,7 +11,12 @@ React 18 + TypeScript + Vite + Tailwind. No backend. No secrets — repo is publ
 - `npm run lint` — ESLint (zero warnings policy)
 - `npm run deploy` — `gh-pages -d dist` (publishes to nataliasoto.com)
 
-Vite `base` is `./nataliasoto` for GitHub Pages routing — don't change without re-checking the deploy.
+Vite `base` is `./nataliasoto` for GitHub Pages routing — don't change without re-checking the deploy. Vite warns this value is non-standard; the warning is harmless and expected.
+
+## Deploy
+1. `npm run deploy` — runs `predeploy` (build) then `gh-pages -d dist`, pushing the built output to the `gh-pages` branch on origin.
+2. GitHub Pages serves from that branch; `public/CNAME` contains `nataliasoto.com` so the custom domain resolves automatically.
+3. This repo pushes features directly to `main` — no PR workflow. `git push origin main` is the norm.
 
 ## Structure
 - `src/pages/HomePage.tsx` — single-page site; all sections live here (Hero → Projects → Writing → Stack → Experience → Education → Contact).

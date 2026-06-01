@@ -9,7 +9,7 @@ import Reveal from "../components/Reveal";
 import InlineLinkedText from "../components/InlineLinkedText";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import SectionDivider from "../components/SectionDivider";
-import profileImg from "../assets/white-profile.png";
+import profileImg from "../assets/white-profile.jpg";
 import resume from "../../public/resume.pdf";
 import {
   SECTION_IDS,

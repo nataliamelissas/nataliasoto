@@ -84,7 +84,7 @@ export interface Writing {
 
 export const WRITING: Writing[] = [
   {
-    name: 'That Family AI Guide',
+    name: 'The Family AI Guide',
     description:
       'A practical resource for families trying to navigate the world of AI. Co-written with a neighborhood friend.',
     url: 'https://substack.com/@thefamilyaiguide',

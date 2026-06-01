@@ -24,6 +24,11 @@ import {
 
 const SECTION_OFFSET = "scroll-mt-24";
 
+// Tinted section backgrounds. Shared with the trailing SectionDivider so the
+// divider blends into the section above it instead of sitting in its own band.
+const BG_WRITING = "bg-rose-50/60";
+const BG_EDUCATION = "bg-butter-50/60";
+
 const scrollToContact = () => {
   const el = document.getElementById(SECTION_IDS.contact);
   if (el) {
@@ -151,7 +156,7 @@ const HomePage: React.FC = () => {
       {/* Writing */}
       <section
         id={SECTION_IDS.writing}
-        className={`relative bg-rose-50/60 py-24 ${SECTION_OFFSET}`}
+        className={`relative ${BG_WRITING} py-24 ${SECTION_OFFSET}`}
       >
         <div className="max-w-5xl mx-auto px-8">
           <Reveal>
@@ -177,7 +182,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <SectionDivider />
+      <SectionDivider bgClass={BG_WRITING} />
 
       {/* Tech Stack */}
       <section
@@ -299,7 +304,7 @@ const HomePage: React.FC = () => {
       {/* Education */}
       <section
         id={SECTION_IDS.education}
-        className={`relative bg-butter-50/60 py-24 ${SECTION_OFFSET}`}
+        className={`relative ${BG_EDUCATION} py-24 ${SECTION_OFFSET}`}
       >
         <div className="max-w-5xl mx-auto px-8">
           <Reveal>
@@ -379,7 +384,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <SectionDivider />
+      <SectionDivider bgClass={BG_EDUCATION} />
 
       {/* Contact */}
       <section

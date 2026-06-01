@@ -15,9 +15,9 @@ const STATUS_STYLE: Record<NonNullable<Project["status"]>, string> = {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <article className="group relative flex flex-col h-full rounded-3xl bg-white border border-ivory-300/70 p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-butter-400 hover:shadow-lift">
+    <article className="group relative flex flex-col h-full min-w-0 rounded-3xl bg-white border border-ivory-300/70 p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-butter-400 hover:shadow-lift">
       <div className="flex items-start justify-between mb-4 gap-3">
-        <h3 className="font-display text-2xl font-semibold text-ink-900 tracking-tight">
+        <h3 className="font-display text-2xl font-semibold text-ink-900 tracking-tight min-w-0 break-words">
           {project.name}
         </h3>
         {project.status && (

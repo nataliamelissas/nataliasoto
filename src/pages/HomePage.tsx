@@ -1,5 +1,6 @@
 import React from "react";
 import ContactBanner from "../components/ContactBanner";
+import HeroQuote from "../components/HeroQuote";
 import ProfileImage from "../components/ProfileImage";
 import SectionHeader from "../components/SectionHeader";
 import ProjectCard from "../components/ProjectCard";
@@ -80,13 +81,7 @@ const HomePage: React.FC = () => {
             {PROFILE.summary}
           </p>
 
-          <p className="font-display text-base md:text-lg italic text-ink-400 border-l-2 border-rose-300 pl-4 mb-12 max-w-2xl">
-            {PROFILE.quote}
-            <span className="not-italic text-ink-400/80">
-              {" "}
-              — {PROFILE.quoteSource}
-            </span>
-          </p>
+          <HeroQuote />
 
           <div className="flex flex-wrap items-center gap-4">
             <button

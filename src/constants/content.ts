@@ -27,9 +27,9 @@ export const PROFILE = {
   summary:
     'Software engineer building agents that automate coding, testing, and GitHub deployments using Claude Code and markdown pipelines. Committed to clean, secure code, graceful error handling, and systems built to scale.',
   quote:
-    '“If we want the future to be better than the past, moral imagination is required, and that’s something only humans can provide [87]. Data and models should be our tools, not our masters.”',
+    '“If we want the future to be better than the past, moral imagination is required, and that’s something only humans can provide. Data and models should be our tools, not our masters.”',
   quoteSource:
-    'Martin Kleppmann, Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems',
+    'Martin Kleppmann, Designing Data-Intensive Applications',
 };
 
 export const SOCIAL = {

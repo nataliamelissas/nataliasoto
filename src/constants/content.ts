@@ -27,8 +27,9 @@ export const PROFILE = {
   summary:
     'Software engineer building agents that automate coding, testing, and GitHub deployments using Claude Code and markdown pipelines. Committed to clean, secure code, graceful error handling, and systems built to scale.',
   quote:
-    '"The greatest evil is convincing us that we have no choice. But choice … cannot be taken away."',
-  quoteSource: 'Chevalier (2022)',
+    '“If we want the future to be better than the past, moral imagination is required, and that’s something only humans can provide [87]. Data and models should be our tools, not our masters.”',
+  quoteSource:
+    'Martin Kleppmann, Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems',
 };
 
 export const SOCIAL = {

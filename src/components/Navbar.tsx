@@ -54,10 +54,10 @@ const Navbar: React.FC = () => {
 
         <div className="hidden md:flex items-center gap-3 ml-4">
           <a href={SOCIAL.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src={linkedinIcon} alt="" className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={linkedinIcon} alt="" className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity animate-icon-shimmer delay-500" />
           </a>
           <a href={SOCIAL.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <img src={githubIcon} alt="" className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={githubIcon} alt="" className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity animate-icon-shimmer delay-700" />
           </a>
         </div>
 

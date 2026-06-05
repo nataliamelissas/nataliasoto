@@ -49,6 +49,7 @@ export default {
       animation: {
         'float-slow': 'float 12s ease-in-out infinite',
         'wiggle': 'wiggle 1.5s ease-in-out infinite',
+        'icon-shimmer': 'icon-shimmer 0.55s ease-in-out 2',
       },
       keyframes: {
         float: {
@@ -58,6 +59,10 @@ export default {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-2deg)' },
           '50%': { transform: 'rotate(2deg)' },
+        },
+        'icon-shimmer': {
+          '0%, 100%': { transform: 'scale(1)', filter: 'brightness(1)' },
+          '50%': { transform: 'scale(1.2)', filter: 'brightness(1.5)' },
         },
       },
       boxShadow: {

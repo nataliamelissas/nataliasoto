@@ -96,10 +96,10 @@ export const WRITING: Writing[] = [
   {
     name: 'The Unprompted Engineer',
     description:
-      "Everything I'm currently studying, practicing, and learning that's worth sharing.",
-    url: 'https://theunpromptedengineer.com',
-    meta: 'theunpromptedengineer.com',
-    status: 'coming-soon',
+      "Everything I'm currently studying, practicing, and learning that's worth sharing. Website coming soon at theunpromptedengineer.com.",
+    url: 'https://substack.com/@theunpromptedengineer',
+    meta: 'Substack',
+    status: 'live',
   },
 ];
 

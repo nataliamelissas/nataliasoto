@@ -52,6 +52,7 @@ export const PROJECTS: Project[] = [
     description:
       "Built because my congregation was invited to read scriptures daily with a topic in mind, then start fresh and do it again. No app out there lets you start a clean copy of a book of scripture with new notes — so I'm making one for myself and my congregation.",
     repo: 'https://github.com/nataliamelissas/scriptures_app',
+    live: 'https://nataliamelissas.github.io/scriptures_app/',
     tags: ['Flutter', 'Dart', 'Firebase'],
     status: 'building',
   },

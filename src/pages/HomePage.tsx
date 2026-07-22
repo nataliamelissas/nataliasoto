@@ -16,6 +16,10 @@ import {
   SECTION_IDS,
   PROFILE,
   PROJECTS,
+  CERTIFICATIONS,
+  CREDLY_EMBED_BASE,
+  CREDLY_BADGE_WIDTH,
+  CREDLY_BADGE_HEIGHT,
   WRITING,
   FEATURED_PILLARS,
   SKILL_GROUPS,
@@ -163,36 +167,45 @@ const HomePage: React.FC = () => {
 
       <SectionDivider />
 
-      {/* Writing */}
+      {/* Certifications */}
       <section
-        id={SECTION_IDS.writing}
-        className={`relative ${BG_WRITING} py-24 ${SECTION_OFFSET}`}
+        id={SECTION_IDS.certifications}
+        className={`relative bg-ivory-100 py-24 ${SECTION_OFFSET}`}
       >
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-6xl mx-auto px-8">
           <Reveal>
             <SectionHeader
-              eyebrow="What I'm writing"
+              eyebrow="What I've earned"
               title={
                 <>
-                  Notes{" "}
+                  Certifications{" "}
                   <span className="italic font-semibold text-rose-500">
-                    in public
+                    & badges
                   </span>
                 </>
               }
-              subtitle="Two newsletters where I share what I'm learning."
+              subtitle="Verified credentials from Credly."
             />
           </Reveal>
 
-          <Reveal className="grid md:grid-cols-2 gap-6">
-            {WRITING.map((entry) => (
-              <WritingCard key={entry.name} writing={entry} />
+          <Reveal className="flex flex-wrap justify-center gap-6">
+            {CERTIFICATIONS.map((cert) => (
+              <iframe
+                key={cert.badgeId}
+                title={cert.name}
+                src={`${CREDLY_EMBED_BASE}${cert.badgeId}`}
+                width={CREDLY_BADGE_WIDTH}
+                height={CREDLY_BADGE_HEIGHT}
+                allowFullScreen
+                loading="lazy"
+                className="border-0"
+              />
             ))}
           </Reveal>
         </div>
       </section>
 
-      <SectionDivider bgClass={BG_WRITING} />
+      <SectionDivider />
 
       {/* Tech Stack */}
       <section
@@ -395,6 +408,37 @@ const HomePage: React.FC = () => {
       </section>
 
       <SectionDivider bgClass={BG_EDUCATION} />
+
+      {/* Writing */}
+      <section
+        id={SECTION_IDS.writing}
+        className={`relative ${BG_WRITING} py-24 ${SECTION_OFFSET}`}
+      >
+        <div className="max-w-5xl mx-auto px-8">
+          <Reveal>
+            <SectionHeader
+              eyebrow="What I'm writing"
+              title={
+                <>
+                  Notes{" "}
+                  <span className="italic font-semibold text-rose-500">
+                    in public
+                  </span>
+                </>
+              }
+              subtitle="Two newsletters where I share what I'm learning."
+            />
+          </Reveal>
+
+          <Reveal className="grid md:grid-cols-2 gap-6">
+            {WRITING.map((entry) => (
+              <WritingCard key={entry.name} writing={entry} />
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <SectionDivider bgClass={BG_WRITING} />
 
       {/* Contact */}
       <section

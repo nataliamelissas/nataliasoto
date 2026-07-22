@@ -25,7 +25,7 @@ export const PROFILE = {
   phoneHref: 'tel:8016497843',
   emailHref: 'mailto:nataliamelissas@gmail.com',
   summary:
-    'Software engineer building agents that automate coding, testing, and GitHub deployments using Claude Code and markdown pipelines. Committed to clean, secure code, graceful error handling, and systems built to scale.',
+    'Software Engineer → AI Systems Engineer training to architect, build, and deploy production-grade software by integrating AI foundation models securely. Committed to clean, secure code, graceful error handling, and systems built to scale.',
   quote:
     '“If we want the future to be better than the past, moral imagination is required, and that’s something only humans can provide. Data and models should be our tools, not our masters.”',
   quoteSource:

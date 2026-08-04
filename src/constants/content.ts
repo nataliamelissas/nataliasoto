@@ -1,6 +1,7 @@
 export const SECTION_IDS = {
   hero: 'hero',
   projects: 'projects',
+  certifications: 'certifications',
   writing: 'writing',
   stack: 'stack',
   experience: 'experience',
@@ -12,10 +13,11 @@ export type SectionId = (typeof SECTION_IDS)[keyof typeof SECTION_IDS];
 
 export const NAV_SECTIONS: { id: SectionId; label: string }[] = [
   { id: SECTION_IDS.projects, label: 'Projects' },
-  { id: SECTION_IDS.writing, label: 'Writing' },
+  { id: SECTION_IDS.certifications, label: 'Certifications' },
   { id: SECTION_IDS.stack, label: 'Stack' },
   { id: SECTION_IDS.experience, label: 'Experience' },
   { id: SECTION_IDS.education, label: 'Education' },
+  { id: SECTION_IDS.writing, label: 'Writing' },
   { id: SECTION_IDS.contact, label: 'Contact' },
 ];
 
@@ -36,6 +38,30 @@ export const SOCIAL = {
   linkedin: 'https://www.linkedin.com/in/nataliamsoto/',
   github: 'https://github.com/nataliamelissas',
 };
+
+// Credly renders a standalone badge at `${CREDLY_EMBED_BASE}${badgeId}` — the
+// same iframe its embed.js generates at runtime, so we embed it directly and
+// avoid loading third-party JS on the site.
+export const CREDLY_EMBED_BASE = 'https://www.credly.com/embedded_badge/';
+export const CREDLY_BADGE_WIDTH = 150;
+export const CREDLY_BADGE_HEIGHT = 270;
+
+export interface Certification {
+  /** Badge name — also used as the iframe title for accessibility. */
+  name: string;
+  badgeId: string;
+}
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    name: 'Building AI-Powered Search with MongoDB Vector Search',
+    badgeId: 'b9767abc-5d1a-4cc3-b01b-e0dc6d8975bc',
+  },
+  {
+    name: 'Building an App with Code Agents and MongoDB',
+    badgeId: '5d7b22d8-c703-49a5-aa57-7f8130275225',
+  },
+];
 
 export interface Project {
   name: string;

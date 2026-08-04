@@ -57,6 +57,10 @@ export const CERTIFICATIONS: Certification[] = [
     name: 'Building AI-Powered Search with MongoDB Vector Search',
     badgeId: 'b9767abc-5d1a-4cc3-b01b-e0dc6d8975bc',
   },
+  {
+    name: 'Building an App with Code Agents and MongoDB',
+    badgeId: '5d7b22d8-c703-49a5-aa57-7f8130275225',
+  },
 ];
 
 export interface Project {
